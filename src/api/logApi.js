@@ -1,4 +1,4 @@
-import { paths } from "./openapi-schema";
+import { paths } from "./openapi-schema.js";
 import { Fetcher } from "openapi-typescript-fetch";
 
 const fetcher = Fetcher.for<paths>();
