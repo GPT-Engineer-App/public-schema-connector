@@ -1,4 +1,4 @@
-export const schema = {
+export const paths = {
   swagger: "2.0",
   info: {
     description: "",
