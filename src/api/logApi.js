@@ -10,7 +10,7 @@ fetcher.configure({
 export const getLogs = async () => {
   try {
     const response = await fetcher.path("/log").method("get").create()();
-    return response.data;
+    return response;
   } catch (error) {
     console.error("Error fetching logs:", error);
     throw error;
@@ -22,7 +22,7 @@ export const createLog = async (log) => {
     const response = await fetcher.path("/log").method("post").create()({
       body: log,
     });
-    return response.data;
+    return response;
   } catch (error) {
     console.error("Error creating log:", error);
     throw error;
@@ -35,7 +35,7 @@ export const updateLog = async (id, log) => {
       query: { id },
       body: log,
     });
-    return response.data;
+    return response;
   } catch (error) {
     console.error("Error updating log:", error);
     throw error;
